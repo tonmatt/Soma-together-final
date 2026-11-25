@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SomaTogether | Learn Together</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <h1>SomaTogether</h1>
+    <p>Learn together. Grow together.</p>
+  </header>
+
+  <main class="container">
+
+    <section id="authSection">
+      <div class="welcome">
+        <h2>Welcome to SomaTogether</h2>
+        <p>A community where learners connect, share knowledge and grow.</p>
+      </div>
+
+      <div class="auth-section">
+
+        <div class="card">
+          <h2>Create an account</h2>
+          <form id="signupForm">
+            <label for="signupName">Your name</label>
+            <input id="signupName" type="text" placeholder="Enter your name" required>
+
+            <label for="signupEmail">Email address</label>
+            <input id="signupEmail" type="email" placeholder="Enter your email" required>
+
+            <label for="signupPassword">Password</label>
+            <input id="signupPassword" type="password" placeholder="At least 6 characters" minlength="6" required>
+
+            <button type="submit">Create account</button>
+          </form>
+        </div>
+
+        <div class="card">
+          <h2>Welcome back</h2>
+          <form id="loginForm">
+            <label for="loginEmail">Email address</label>
+            <input id="loginEmail" type="email" placeholder="Enter your email" required>
+
+            <label for="loginPassword">Password</label>
+            <input id="loginPassword" type="password" placeholder="Enter your password" required>
+
+            <button type="submit">Log in</button>
+          </form>
+
+          <button id="resetPassword" type="button" class="secondary">
+            Forgot password?
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="dashboard" hidden>
+
+      <div class="dashboard-heading">
+        <div>
+          <h2 id="greeting">Welcome!</h2>
+          <p>Your learning community starts here.</p>
+        </div>
+        <button id="logoutButton" type="button" class="danger">
+          Log out
+        </button>
+      </div>
+
+      <div class="card">
+        <h2>Your profile</h2>
+        <form id="profileForm">
+          <label for="profileName">Display name</label>
+          <input id="profileName" type="text" placeholder="Your name" required>
+          <button type="submit">Save profile</button>
+        </form>
+        <p id="profileEmail"></p>
+      </div>
+
+      <div class="card">
+        <h2>Share something you learned</h2>
+        <form id="postForm">
+          <label for="postContent">Your learning post</label>
+          <textarea id="postContent" placeholder="Share a question, idea or learning experience..." required></textarea>
+          <button type="submit">Publish post</button>
+        </form>
+      </div>
+
+      <div class="card">
+        <h2>Community feed</h2>
+        <div id="postsList">
+          <p>Loading posts...</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Connect with learners</h2>
+        <form id="friendForm">
+          <label for="friendEmail">Learner's email address</label>
+          <input id="friendEmail" type="email" placeholder="Enter their registered email" required>
+          <button type="submit">Send friend request</button>
+        </form>
+      </div>
+
+      <div class="card">
+        <h2>Friend requests</h2>
+        <div id="requestsList">
+          <p>Loading requests...</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Your friends</h2>
+        <div id="friendsList">
+          <p>Loading friends...</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Soma AI</h2>
+        <p>Your learning assistant is planned for the next development stage.</p>
+        <p>It will help learners understand topics and explore questions across subjects.</p>
+      </div>
+
+    </section>
+
+    <p id="message" role="status" aria-live="polite"></p>
+
+  </main>
+
+  <footer>
+    <p>© 2026 SomaTogether. Learn together. Grow together.</p>
+  </footer>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
